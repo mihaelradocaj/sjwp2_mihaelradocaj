@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas vježba</title>
+</head>
+<body>
+    <h1>Zadatak 1.</h1>
+    <canvas 
+        id="z1"
+        width="600px"
+        height="600px"
+        style="border: 1px solid black;"
+    ></canvas>
+    <h1>Zadatak 2.</h1>
+    <canvas 
+        id="z2"
+        width="600px"
+        height="600px"
+        style="border: 1px solid black;"
+    ></canvas>
+    <h1>Zadatak 3.</h1>
+    <canvas 
+        id="z3"
+        width="600px"
+        height="600px"
+        style="border: 1px solid black;"
+    ></canvas>
+    <h1>Zadatak 4.</h1>
+    <canvas 
+        id="z4"
+        width="600px"
+        height="600px"
+        style="border: 1px solid black;"
+    ></canvas>
+    <h1>Zadatak 5.</h1>
+    <canvas 
+        id="z5"
+        width="600px"
+        height="600px"
+        style="border: 1px solid black;"
+    ></canvas>
+    <h1>Zadatak 6.</h1>
+    <canvas 
+        id="z6"
+        width="600px"
+        height="600px"
+        style="border: 1px solid black;"
+    ></canvas>
+
+    <script>
+        let c = document.getElementById("z1");
+        let ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.rect(0, 0, 600, 450);
+        ctx.fillStyle = "lightblue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.rect(0, 450, 600, 150);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.rect(100, 425, 300, 50);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.rect(240, 150, 20, 275);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(125, 400);
+        ctx.lineTo(240, 200);
+        ctx.lineTo(240, 400);
+        ctx.fillStyle = "white";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(260, 400);
+        ctx.lineTo(260, 200);
+        ctx.lineTo(375, 400);
+        ctx.fillStyle = "white";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(175, 175);
+        ctx.lineTo(240, 150);
+        ctx.lineTo(240, 200);
+        ctx.fillStyle = "green";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(500, 100, 75, 0, 2 * Math.PI);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+    </script>
+
+    <script>
+        let c2 = document.getElementById("z2");
+        let ctx2 = c2.getContext("2d");
+        
+        ctx2.beginPath();
+        ctx2.rect(0, 0, 600, 600);
+        ctx2.fillStyle = "#f2d2bd"
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.arc(300, 1400, 1000, 0, 2 * Math.PI);
+        ctx2.fillStyle = "lightyellow";
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.rect(125, 450, 15, 75);
+        ctx2.fillStyle = "brown";
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.moveTo(75, 450);
+        ctx2.lineTo(132.5, 150);
+        ctx2.lineTo(190, 450);
+        ctx2.fillStyle = "darkgreen";
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.rect(223.75, 425, 10, 50);
+        ctx2.fillStyle = "brown";
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.moveTo(200, 425);
+        ctx2.lineTo(228.75, 250);
+        ctx2.lineTo(257.5, 425);
+        ctx2.fillStyle = "darkgreen";
+        ctx2.fill();
+        
+        ctx2.beginPath();
+        ctx2.rect(373.75, 415, 10, 50);
+        ctx2.fillStyle = "brown";
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.moveTo(350, 415);
+        ctx2.lineTo(378.75, 240);
+        ctx2.lineTo(407.5, 415);
+        ctx2.fillStyle = "darkgreen";
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.rect(470, 450, 10, 62.5);
+        ctx2.fillStyle = "brown";
+        ctx2.fill();
+
+        ctx2.beginPath();
+        ctx2.moveTo(437.5, 450);
+        ctx2.lineTo(477.5, 190);
+        ctx2.lineTo(517.5, 450);
+        ctx2.fillStyle = "darkgreen";
+        ctx2.fill();
+    </script>
+
+    <script>
+        let c3 = document.getElementById("z3");
+        let ctx3 = c3.getContext("2d");
+
+        ctx3.beginPath();
+        ctx3.arc(300, 350, 150, 0, 2 * Math.PI);
+        ctx3.fillStyle = "red"
+        ctx3.fill();
+
+        ctx3.beginPath();
+        ctx3.arc(300, 150, 40, 0, 2 * Math.PI);
+        ctx3.fillStyle = "orange";
+        ctx3.fill();
+        
+        ctx3.beginPath();
+        ctx3.arc(300, 150, 30, 0, 2 * Math.PI);
+        ctx3.fillStyle = "white";
+        ctx3.fill();
+
+        ctx3.beginPath();
+        ctx3.rect(250, 175, 100, 50);
+        ctx3.fillStyle = "orange";
+        ctx3.fill();
+    </script>
+</body>
+</html>
