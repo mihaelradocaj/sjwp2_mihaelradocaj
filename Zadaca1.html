@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skriptni jezici</title>
+    <link rel="stylesheet" href="./Zadaca1style.css" />
+  </head>
+  <body>
+    <div class="flexbox">
+      <p><a href="./Zadaca1.html">Početna</a></p>
+      <p><a href="./Zadaca1_onama.html">O nama</a></p>
+      <p><a href="./Zadaca1_kontakt.html">Kontakt</a></p>
+    </div>
+    <h1>HTML, CSS, Canvas i SVG</h1>
+    <p>
+      <i>Canvas</i> je HTML5 element koji, pomoću JavaScript-a, omogućava
+      dinamičko iscrtavanje različitih oblika, dodavanje slika, kreiranje
+      animacija na web stranici i sl.
+    </p>
+    <p>
+      Na platnu (canvas-u) to ne radimo korištenjem novog jezika (kao što je to
+      slučaj kod SVG) ili korištenjem Flasha. Najčešće uporabe platna su:
+    </p>
+    <ul>
+      <li>crtanje grafova,</li>
+      <li>animiranje, igre i</li>
+      <li>kompozicija slike.</li>
+    </ul>
+    <hr />
+    <p>
+      <b>SVG</b> (<i>Scalable Vector Graphics</i>) grafika ne gubi kvalitetu
+      prilikom zumiranja ili resize-a.
+    </p>
+    <p>
+      Svi crteži mogu biti interaktivni i dinamički. Svaki element i atribut SVG
+      datoteke može biti animiran. Animacije mogu biti definirane i pokrenute
+      interaktivno ili pomoću skripti.
+    </p>
+    <p>SVG integrira druge W3C standarde kao što su DOM, XSL …</p>
+    <hr />
+    <h3>Usporedba SVG-a i Canvas-a</h3>
+    <table>
+      <!--Tablicu kasnije-->
+    </table>
+    <table>
+      <!--Ime i telefon tablicu kasnije-->
+    </table>
+    <img src="./Zadaca1_materijali/bulb.png" alt="bulb" />
+    <hr />
+    <h1>Primjer SVG-a i Canvasa</h1>
+    <canvas
+      id="canvaspr"
+      width="500vw"
+      height="500vh"
+      style="border: 1px solid black; background-color: cyan"
+    ></canvas>
+    <script>
+      let c = document.getElementById("canvaspr");
+      let ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.rect(100, 100, 300, 300);
+      ctx.fillStyle = "beige";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.rect(100, 80, 300, 20);
+      ctx.fillStyle = "darkblue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.rect(60, 180, 40, 100);
+      ctx.fillStyle = "gold";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.rect(400, 180, 40, 100);
+      ctx.fillStyle = "gold";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(150, 400);
+      ctx.lineTo(250, 425);
+      ctx.lineTo(150, 450);
+      ctx.fillStyle = "darkblue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(350, 400);
+      ctx.lineTo(250, 425);
+      ctx.lineTo(350, 450);
+      ctx.fillStyle = "darkblue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(250, 425, 12.5, 0, 2 * Math.PI);
+      ctx.fillStyle = "gold";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(200, 200, 30, 0, 2 * Math.PI);
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(200, 200, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = "darkblue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(300, 200, 30, 0, 2 * Math.PI);
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(300, 200, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = "darkblue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(250, 250);
+      ctx.lineTo(275, 275);
+      ctx.lineTo(225, 275);
+      ctx.fillStyle = "orange";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(250, 300, 75, 0, Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+    </script>
+    <svg width="500vw" height="500vh">
+      <rect x="0" y="0" width="500" height="500" fill="cyan"></rect>
+      <rect x="100" y="100" width="300" height="300" fill="beige"></rect>
+      <rect x="100" y="80" width="300" height="20" fill="darkblue"></rect>
+      <rect x="60" y="180" width="40" height="100" fill="gold"></rect>
+      <rect x="400" y="180" width="40" height="100" fill="gold"></rect>
+    </svg>
+  </body>
+</html>
