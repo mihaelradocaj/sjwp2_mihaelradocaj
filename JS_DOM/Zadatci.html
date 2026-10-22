@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS zadatci</title>
+  </head>
+  <body>
+    <!--ZADATAK 1-->
+    <div class="z1">
+      <h1 id="naslov1">Moja stranica</h1>
+      <button id="btn1">Promijeni tekst</button>
+    </div>
+
+    <!--ZADATAK 2-->
+    <div class="z2">
+      <p id="opis">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        architecto nesciunt ipsum quibusdam sapiente minima quae minus illum
+        mollitia earum qui sequi tempora, nisi ipsa! Est neque ducimus id porro.
+      </p>
+      <button id="btn2">Promijeni tekst</button>
+    </div>
+
+    <!--ZADATAK 3-->
+    <div class="z3">
+      <button id="btn3">Promijeni boju</button>
+    </div>
+
+    <!--ZADATAK 4-->
+    <div class="z4">
+      <button id="btn4">Promijeni stil odlomka</button>
+    </div>
+
+    <!--ZADATAK 5-->
+    <div class="z5">
+      <button id="btn5">Prikaži poruku</button>
+      <p id="skrivenitxt"></p>
+    </div>
+
+    <!--ZADATAK 6-->
+    <div class="z6">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        quae dicta distinctio at hic illum sed sequi qui modi, odio repudiandae
+        magnam tempora iste provident accusantium similique aliquam eum non.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officia
+        vero, amet soluta laboriosam ut veniam perspiciatis hic autem? Nihil
+        architecto necessitatibus laudantium optio quam at fuga. Distinctio,
+        aspernatur quisquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+        deserunt nulla reiciendis quidem sunt temporibus eos accusantium odio,
+        tenetur, ad fugit iste laborum. Suscipit harum modi beatae maxime
+        molestias ab.
+      </p>
+      <button id="btn6">Promijeni boju svih</button>
+    </div>
+
+    <!--ZADATAK 7-->
+    <div class="z7">
+      <button id="btn7">Istakni upozorenje</button>
+      <div
+        id="u"
+        style="
+          display: flex;
+          height: 20vh;
+          width: 30vw;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+        "
+      >
+        <h1>UPOZORENJE!</h1>
+      </div>
+    </div>
+
+    <script>
+      const naslov = document.getElementById("naslov1");
+      const btn = document.getElementById("btn1");
+      btn.onclick = function () {
+        naslov.textContent = "DOM radi";
+      };
+
+      const opis = document.getElementById("opis");
+      const btn2 = document.getElementById("btn2");
+      btn2.onclick = function () {
+        opis.textContent =
+          "Ja sam Mihael i idem u Tehničku školu Slavonski Brod.";
+      };
+
+      const btn3 = document.getElementById("btn3");
+      btn3.onclick = function () {
+        naslov.style.color = "blue";
+        naslov.style.fontSize = "32px";
+      };
+
+      const btn4 = document.getElementById("btn4");
+      btn4.onclick = function () {
+        opis.style.backgroundColor = "yellow";
+        opis.style.wordSpacing = "15px";
+        opis.style.textAlign = "right";
+      };
+
+      const btn5 = document.getElementById("btn5");
+      const skrivenitxt = document.getElementById("skrivenitxt");
+      btn5.onclick = function () {
+        skrivenitxt.textContent = "Uspješno ste kliknuli gumb!";
+      };
+
+      const btn6 = document.getElementById("btn6");
+      const paragrafi = document.querySelectorAll(".z6 p");
+      btn6.onclick = function () {
+        paragrafi[0].style.color = "red";
+        paragrafi[1].style.color = "green";
+        paragrafi[2].style.color = "blue";
+      };
+
+      const btn7 = document.getElementById("btn7");
+      const u = document.getElementById("u");
+      const uh = document.querySelector("#u h1");
+      btn7.onclick = function () {
+        u.style.fontWeight = "bold";
+        uh.style.color = "red";
+        u.style.backgroundColor = "yellow";
+      };
+    </script>
+  </body>
+</html>
