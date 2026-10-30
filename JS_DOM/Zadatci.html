@@ -78,6 +78,47 @@
       </div>
     </div>
 
+    <!--ZADATAK 8-->
+    <div class="z8">
+      <div class="kartica" style="border: 5px solid black; border-radius: 10px; padding: 20px; width: 50vw; height: 30vh; margin: auto; background-color: lightyellow;">
+        <div class="istaknuto" style="display: flex; justify-content: center; align-items: center; background-color:yellow; border-radius: 5px; width: 100%; height: 100%; flex-direction: column;">
+          <h2>Kartica</h2>
+          <p>Ovo je primjer kartice.</p>
+        </div>
+      </div>
+      <button id="btn8">Istakni karticu</button>
+    </div>
+
+    <!--ZADATAK 9-->
+    <div class="z9">
+      <p id="odlomak" style="display: block;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a aliquid unde quas accusamus accusantium quisquam esse suscipit corrupti asperiores illo impedit sunt laboriosam, similique autem est nihil mollitia facere!
+      Dolorem officia aliquid, laborum beatae enim repudiandae maxime ea, dolorum dignissimos harum, accusantium a. Velit, impedit ex aliquam sit commodi, consequatur veniam nemo natus earum, fuga asperiores blanditiis? Ex, laudantium?
+      Doloribus perspiciatis error, rerum porro possimus a praesentium dolore odio, quas expedita ab non quaerat? Cum, sunt tempora. Dignissimos nobis illum enim porro optio accusantium voluptatum non omnis id ut?
+      Harum officia odit molestias voluptas earum sint tenetur unde delectus recusandae, a corrupti perspiciatis itaque tempore, iure fuga nostrum fugit ratione, eaque maiores ducimus. Quos officiis eligendi voluptas ab omnis.
+      Consectetur, reprehenderit necessitatibus? Accusamus maiores ex eos quisquam maxime asperiores culpa officiis ipsam autem architecto voluptas nemo, fuga suscipit consequatur! Qui, atque
+       aliquid excepturi perferendis nobis quod facere veniam pariatur.</p>
+      <button id="btn9">Sakrij</button>
+    </div>
+
+    <!--ZADATAK 10-->
+    <div class="z10">
+      <img id="slik" src="./../pexels-punttim-5677267.jpg" alt="cesta" style="width: 50vw;">
+      <button id="btn10">Promijeni sliku</button>
+    </div>
+    
+    <!--ZADATAK 11-->
+    <div class="z11">
+      <a id="a" href="https://www.google.com/">Google</a>
+      <button id="btn11">Promijeni URL</button>
+    </div>
+
+    <!--ZADATAK 12-->
+    <div class="z12">
+      <button id="btnon">Onemogući</button>
+      <button id="btnom">Omogući</button>
+      <button id="btn12">Treći button</button>
+    </div>
+
     <script>
       const naslov = document.getElementById("naslov1");
       const btn = document.getElementById("btn1");
@@ -127,6 +168,67 @@
         uh.style.color = "red";
         u.style.backgroundColor = "yellow";
       };
+
+      const btn8 = document.getElementById("btn8");
+      const kartica = document.querySelector(".kartica");
+      const istaknuto = document.querySelector(".istaknuto");
+      btn8.onclick = function () {
+        if (istaknuto.style.display === "none"){
+          istaknuto.style.display = "flex";
+        }
+        else{
+          istaknuto.style.display = "none";
+        }
+      };
+
+      const btn9 = document.getElementById("btn9");
+      const odlomak = document.getElementById("odlomak");
+      btn9.onclick = function(){
+        if (odlomak.style.display === "none"){
+          odlomak.style.display = "block";
+          btn9.textContent = "Sakrij";
+        }
+        else{
+          odlomak.style.display = "none";
+          btn9.textContent = "Otkrij";
+        }
+      }
+
+      const btn10 = document.getElementById("btn10");
+      const slik = document.getElementById("slik");
+      btn10.onclick = function(){
+        if (slik.getAttribute('src') === "./../pexels-punttim-5677267.jpg"){
+          slik.setAttribute('src', './../pexels-nguyen-phuong-anh-2163641398-40385657.jpg');
+          slik.setAttribute('alt', 'zgrada');
+        }
+        else{
+          slik.setAttribute('src', './../pexels-punttim-5677267.jpg');
+          slik.setAttribute('alt', 'cesta');
+        }
+      }
+
+      const btn11 = document.getElementById("btn11");
+      const a = document.getElementById("a");
+      btn11.onclick = function(){
+        if (a.getAttribute('href') === "https://www.google.com/"){
+          a.setAttribute('href', 'https://www.wikipedia.org/');
+          a.textContent = "Wikipedia";
+        }
+        else{
+          a.setAttribute('href', 'https://www.google.com/');
+          a.textContent = "Google";
+        }
+      }
+
+      const btnon = document.getElementById("btnon");
+      const btnom = document.getElementById("btnom");
+      const bt12 = document.getElementById("btn12");
+      btnon.onclick = function(){
+        btn12.setAttribute('disabled', true);
+      }
+      btnom.onclick = function(){
+        btn12.setAttribute('diabled', false);
+      }
     </script>
   </body>
 </html>
