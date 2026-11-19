@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<body>
+    <!-- Zadatak 1 -->
+    <h1 id="broj">0</h1>
+    <button id="btn1">+</button>
+    <button id="btn2">-</button>
+    <button id="btn3">Reset</button>
+    <p id="negativan" style="display: none;">Broj je negativan</p>
+
+    <br>
+    <br>
+    <!-- Zadatak 2 -->
+    <input type="text" id="input1" placeholder="Unesite tekst">
+    <p id="pritisnuto" style="display: block;">Pritisnuto: N/A</p>
+
+    <br>
+    <br>
+    <!-- Zadatak 3 -->
+    <input type="number" id="input2" placeholder="Unesite 1. broj">
+    <input type="number" id="input3" placeholder="Unesite 2. broj">
+    <button id="btn4">Zbroji</button>
+    <button id="btn5">Oduzmi</button>
+    <button id="btn6">Pomnozi</button>
+    <button id="btn7">Podijeli</button>
+    <h1 id="rezultat" style="display: block;">Rezultat: N/A</h1>
+
+    <script>
+        let broj = 0;
+        let h1 = document.getElementById("broj");
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let p = document.getElementById("negativan");
+
+        btn1.addEventListener("click", povecaj);
+        btn2.addEventListener("click", smanji);
+        btn3.addEventListener("click", reset);
+
+        function povecaj() {
+            broj++;
+            h1.textContent = broj;
+            if (broj < 0) {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+
+        function smanji() {
+            broj--;
+            h1.textContent = broj;
+            if (broj < 0) {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+
+        function reset() {
+            broj = 0;
+            h1.textContent = broj;
+            p.style.display = "none";
+        }
+
+        let input1 = document.getElementById("input1");
+        let pritisnuto = document.getElementById("pritisnuto");
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                pritisnuto.textContent = "Potvrđeno";
+            }
+            else if (event.key === "Escape") {
+                pritisnuto.textContent = "Otkazano";
+                input1.value = "";
+            }
+            else {
+                pritisnuto.textContent = "Pritisnuto: " + event.key;
+            }
+        });
+
+        let input2 = document.getElementById("input2");
+        let input3 = document.getElementById("input3");
+        let btn4 = document.getElementById("btn4");
+        let btn5 = document.getElementById("btn5");
+        let btn6 = document.getElementById("btn6");
+        let btn7 = document.getElementById("btn7");
+        let rezultat = document.getElementById("rezultat");
+
+        function provjeriUnos() {
+            if (input2.value === "" && input3.value === "") {
+                rezultat.textContent = "Rezultat: N/A";
+                return false;
+            }
+            return true;
+        }
+
+        btn4.addEventListener("click", function() {
+            if (!provjeriUnos()) return;
+            let zbroj = Number(input2.value) + Number(input3.value);
+            rezultat.textContent = "Rezultat: " + zbroj;
+        });
+
+        btn5.addEventListener("click", function() {
+            if (!provjeriUnos()) return;
+            let razlika = Number(input2.value) - Number(input3.value);
+            rezultat.textContent = "Rezultat: " + razlika;
+        });
+
+        btn6.addEventListener("click", function() {
+            if (!provjeriUnos()) return;
+            let umnozak = Number(input2.value) * Number(input3.value);
+            rezultat.textContent = "Rezultat: " + umnozak;
+        });
+
+        btn7.addEventListener("click", function() {
+            if (!provjeriUnos()) return;
+            if (Number(input3.value) === 0) {
+                rezultat.textContent = "Rezultat: Dijeljenje s nulom nije dozvoljeno";
+                return;
+            }
+            let kvocijent = Number(input2.value) / Number(input3.value);
+            rezultat.textContent = "Rezultat: " + kvocijent;
+        });
+
+
+    </script>
+</body>
+</html>
